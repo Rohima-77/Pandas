@@ -1,0 +1,41 @@
+# From a dictionary of lists/arrays
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['NY', 'Paris', 'London']
+}
+df = pd.DataFrame(data)
+print(df)
+
+# From a list of dictionaries
+data = [
+    {'Name': 'Alice', 'Age': 25, 'City': 'NY'},
+    {'Name': 'Bob', 'Age': 30, 'City': 'Paris'},
+    {'Name': 'Charlie', 'Age': 35, 'City': 'London'}
+]
+df = pd.DataFrame(data)
+print(df)
+
+# With custom index
+df = pd.DataFrame(data, index=['a', 'b', 'c'])
+print(df)
+
+# From a numpy array
+import numpy as np
+arr = np.random.rand(3, 4)
+df = pd.DataFrame(arr, columns=['A', 'B', 'C', 'D'])
+print(df)
+
+
+
+
+
+DataFrame Attributes and Basic Methods
+python
+df.shape      # Get dimensions (rows, columns)
+df.columns    # Get column names
+df.index      # Get row index
+df.head()     # Show first 5 rows
+df.tail(3)    # Show last 3 rows
+df.info()     # Show summary info
+df.describe() # Show statistical summary
