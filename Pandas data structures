@@ -1,0 +1,34 @@
+Pandas Data Structures
+Pandas has two primary data structures:
+
+Series - 1-dimensional labeled array
+
+DataFrame - 2-dimensional labeled data structure (like a spreadsheet)
+
+Series
+A Series is a one-dimensional array-like object containing a sequence of values and an associated array of data labels (its index).
+
+Creating a Series:
+
+import pandas as pd
+
+# From a list
+s = pd.Series([1, 3, 5, 7, 9])
+print(s)
+
+# With custom index
+s = pd.Series([10, 20, 30], index=['a', 'b', 'c'])
+print(s)
+
+# From a dictionary
+data = {'a': 10, 'b': 20, 'c': 30}
+s = pd.Series(data)
+print(s)
+Series Attributes and Methods
+
+s.values  # Get the values as numpy array
+s.index   # Get the index
+s.head()  # Show first few rows
+s.tail()  # Show last few rows
+
+
